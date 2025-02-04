@@ -7,6 +7,6 @@ spec:
     spec:
       containers:
         # Replace with your docker registry info
-        - image: registry.digitalocean.com/<YOUR_DOCKER_REGISTRY_NAME_HERE>/2048-game:latest
+        - image: 665986443982.dkr.ecr.ap-northeast-1.amazonaws.com/game-2048:latest
           ports:
             - containerPort: 80
