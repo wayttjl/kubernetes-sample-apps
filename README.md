@@ -8,5 +8,5 @@ Kubernetes sample applications provided by this repository:
 - [doks-example](doks-example/) - Deploy your first application (workload) to a fresh DOKS cluster.
 - [emojivoto-example](emojivoto-example/) - Deploy the [Emojivoto](https://github.com/BuoyantIO/emojivoto) sample application.
 - [game-2048-example](game-2048-example/) - Build and deploy the [2048 game](https://en.wikipedia.org/wiki/2048_(video_game)) application.
-- test26
+- test27
 - [podinfo-example](podinfo-example/) - Deploy the [Podinfo](https://github.com/stefanprodan/podinfo) sample application.
