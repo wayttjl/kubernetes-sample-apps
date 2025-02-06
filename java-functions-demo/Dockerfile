@@ -1,5 +1,6 @@
 FROM openjdk:21-slim as BUILD
 
+RUN apt-get update
 RUN apt-get install maven=3.8.7-1 -y
 
 COPY . /usr/src/app
