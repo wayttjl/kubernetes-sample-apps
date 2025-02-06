@@ -24,18 +24,19 @@ public class EchoResultFunction implements Function<Message<String>, Message<Str
     /*
      * YOUR CODE HERE
      *
-     * Try running `mvn test`.  Add more test as you code in `test/java/echo/SpringCloudEventsApplicationTests`.
+     * Try running `mvn test`. Add more test as you code in
+     * `test/java/echo/SpringCloudEventsApplicationTests`.
      */
-     HttpHeaders httpHeaders = HeaderUtils.fromMessage(inputMessage.getHeaders());
+    HttpHeaders httpHeaders = HeaderUtils.fromMessage(inputMessage.getHeaders());
 
-     LOGGER.log(Level.INFO, "Input CE Id:{0}", httpHeaders.getFirst(ID));
-     LOGGER.log(Level.INFO, "Input CE Spec Version:{0}", httpHeaders.getFirst(SPECVERSION));
-     LOGGER.log(Level.INFO, "Input CE Source:{0}", httpHeaders.getFirst(SOURCE));
-     LOGGER.log(Level.INFO, "Input CE Subject:{0}", httpHeaders.getFirst(SUBJECT));
-     String input = inputMessage.getPayload();
-     LOGGER.log(Level.INFO, "Input {0} ", input);
+    LOGGER.log(Level.INFO, "Input CE Id:{0}", httpHeaders.getFirst(ID));
+    LOGGER.log(Level.INFO, "Input CE Spec Version:{0}", httpHeaders.getFirst(SPECVERSION));
+    LOGGER.log(Level.INFO, "Input CE Source:{0}", httpHeaders.getFirst(SOURCE));
+    LOGGER.log(Level.INFO, "Input CE Subject:{0}", httpHeaders.getFirst(SUBJECT));
+    String input = "input is" + inputMessage.getPayload();
+    LOGGER.log(Level.INFO, "Input {0} ", input);
 
-     return CloudEventMessageBuilder.withData(input)
+    return CloudEventMessageBuilder.withData(input)
         .setType("end").setId(UUID.randomUUID().toString())
         .setSubject("End event")
         .setSource(URI.create("http://example.com/end")).build();
