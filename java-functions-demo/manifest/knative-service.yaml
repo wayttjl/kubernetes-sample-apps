@@ -4,9 +4,10 @@ metadata:
   name: java-functions-demo
 spec:
   template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/metric: "rps"
+        autoscaling.knative.dev/target: "150"
     spec:
       containers:
-        # Replace with your docker registry info
         - image: 665986443982.dkr.ecr.ap-northeast-1.amazonaws.com/java-functions-demo:latest
-          ports:
-            - containerPort: 80
