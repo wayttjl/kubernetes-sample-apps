@@ -33,7 +33,7 @@ public class EchoResultFunction implements Function<Message<String>, Message<Str
     LOGGER.log(Level.INFO, "Input CE Spec Version:{0}", httpHeaders.getFirst(SPECVERSION));
     LOGGER.log(Level.INFO, "Input CE Source:{0}", httpHeaders.getFirst(SOURCE));
     LOGGER.log(Level.INFO, "Input CE Subject:{0}", httpHeaders.getFirst(SUBJECT));
-    String input = "input is" + inputMessage.getPayload();
+    String input = "my input is" + inputMessage.getPayload();
     LOGGER.log(Level.INFO, "Input {0} ", input);
 
     return CloudEventMessageBuilder.withData(input)
