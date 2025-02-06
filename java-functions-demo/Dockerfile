@@ -1,6 +1,5 @@
 FROM openjdk:21-slim as BUILD
 
-RUN sed -i s@/deb.debian.org/@/mirrors.aliyun.com/@g /etc/apt/sources.list.d/debian.sources && apt-get update
 RUN apt-get install maven=3.8.7-1 -y
 
 COPY . /usr/src/app
