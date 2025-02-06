@@ -11,3 +11,4 @@ spec:
     spec:
       containers:
         - image: 665986443982.dkr.ecr.ap-northeast-1.amazonaws.com/java-functions-demo:latest
+          imagePullPolicy: Always
