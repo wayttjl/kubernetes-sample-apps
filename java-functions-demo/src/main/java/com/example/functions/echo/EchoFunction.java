@@ -36,7 +36,7 @@ public class EchoFunction implements Function<Message<String>, Message<String>> 
     String input = "my input is " + inputMessage.getPayload();
     LOGGER.log(Level.INFO, "Input {0} ", input);
 
-    String output = "input is " + input;
+    String output = "the input is " + input;
     LOGGER.log(Level.INFO, "Output {0} ", output);
 
     return CloudEventMessageBuilder.withData(input)
